@@ -10,18 +10,15 @@
       }
     },
     {
-      "src": "server/api/**/*.js",
-      "use": "@vercel/node"
+      "src": "server/api/index.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": "server/src/**",
+        "memory": 512,
+        "maxDuration": 10
+      }
     }
   ],
-
-  "functions": {
-    "server/api/index.js": {
-      "includeFiles": "server/src/**",
-      "memory": 512,
-      "maxDuration": 10
-    }
-  },
 
   "routes": [
     {
@@ -32,12 +29,5 @@
       "src": "/(.*)",
       "dest": "/client/build/$1"
     }
-  ],
-
-  "env": {
-    "MONGODB_URI": "@MONGODB_URI",
-    "JWT_SECRET": "@JWT_SECRET",
-    "OPENAI_API_KEY": "@OPENAI_API_KEY",
-    "CLIENT_URL": "@CLIENT_URL"
-  }
+  ]
 } 
