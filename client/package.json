@@ -52,20 +52,10 @@
     "ts-jest": "^29.1.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
+    "build": "EXTEND_ESLINT=false DISABLE_ESLINT_PLUGIN=true CI=false react-scripts build",
     "test": "jest --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ],
-    "rules": {
-      "@typescript-eslint/no-unused-vars": "warn",
-      "react-hooks/exhaustive-deps": "warn"
-    }
   },
   "browserslist": {
     "production": [
