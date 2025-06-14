@@ -1,5 +1,9 @@
 src/components/Admin/AdminDashboard.tsx
 src/components/Admin/ClassMonitoring.tsx
 src/components/Common/GuidedButton.tsx
+src/components/Dashboard/CompletionViewer.tsx
+src/components/Layout/Footer.tsx
 build/*
-node_modules/* 
+node_modules/*
+src/**/*.tsx
+src/**/*.ts 
