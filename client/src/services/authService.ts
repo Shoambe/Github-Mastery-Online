@@ -5,7 +5,7 @@ const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5001/api';
 
 // Create axios instance with default config
 const axiosInstance = axios.create({
-  baseURL: API_URL,
+  baseURL: API_URL.replace(/\/+$/, ''), // Remove trailing slashes
   headers: {
     'Content-Type': 'application/json',
   },
@@ -161,7 +161,7 @@ export const authService = {
         securityQuestionsIncluded: !!requestData.securityQuestions
       });
       
-      const response = await axios.post(`${API_URL}/auth/register`, requestData);
+      const response = await axiosInstance.post('/auth/register', requestData);
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
       }
@@ -174,7 +174,7 @@ export const authService = {
 
   login: async (data: LoginData) => {
     try {
-      const response = await axios.post(`${API_URL}/auth/login`, data);
+      const response = await axiosInstance.post('/auth/login', data);
       if (response.data.token) {
         localStorage.setItem('token', response.data.token);
       }

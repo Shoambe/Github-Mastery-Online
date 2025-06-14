@@ -44,7 +44,7 @@ const connectDB = async () => {
 // Initialize database connection
 connectDB().catch(console.error);
 
-// Routes
+// Routes with /api prefix
 app.use('/api/auth', authRoutes);
 app.use('/api/tutorials', tutorialRoutes);
 app.use('/api/progress', progressRoutes);
@@ -55,8 +55,20 @@ app.use('/api/chat', chatRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/badges', badgeRoutes);
 
+// Routes without /api prefix (for compatibility)
+app.use('/auth', authRoutes);
+app.use('/tutorials', tutorialRoutes);
+app.use('/progress', progressRoutes);
+app.use('/exercises', exerciseRoutes);
+app.use('/admin', adminRoutes);
+app.use('/quizzes', quizRoutes);
+app.use('/chat', chatRoutes);
+app.use('/dashboard', dashboardRoutes);
+app.use('/badges', badgeRoutes);
+
 // Keep /api/modules for backward compatibility
 app.use('/api/modules', exerciseRoutes);
+app.use('/modules', exerciseRoutes);  // without /api prefix
 
 // Basic route for testing
 app.get('/api/test', (req, res) => {
