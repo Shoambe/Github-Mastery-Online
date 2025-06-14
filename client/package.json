@@ -53,7 +53,7 @@
   },
   "scripts": {
     "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
-    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
+    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build && cp -r build ../build",
     "test": "jest --env=jsdom",
     "eject": "react-scripts eject"
   },
