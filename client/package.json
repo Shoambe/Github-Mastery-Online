@@ -52,8 +52,8 @@
     "ts-jest": "^29.1.2"
   },
   "scripts": {
-    "start": "DISABLE_ESLINT_PLUGIN=true react-scripts start",
-    "build": "EXTEND_ESLINT=false DISABLE_ESLINT_PLUGIN=true CI=false react-scripts build",
+    "start": "react-scripts start",
+    "build": "CI=false react-scripts build",
     "test": "jest --env=jsdom",
     "eject": "react-scripts eject"
   },
