@@ -3,14 +3,14 @@
   "name": "github-mastery-server",
   "builds": [
     {
-      "src": "api/index.js",
+      "src": "src/server.js",
       "use": "@vercel/node"
     }
   ],
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/api/index.js"
+      "destination": "/src/server.js"
     }
   ],
   "env": {
