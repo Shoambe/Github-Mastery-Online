@@ -6,10 +6,11 @@
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
     "test": "jest --detectOpenHandles --forceExit",
+    "build": "echo 'Building server...'",
     "vercel-build": "echo 'Building server...'"
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": "18.x"
   },
   "keywords": [],
   "author": "",
