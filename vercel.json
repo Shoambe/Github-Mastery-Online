@@ -5,7 +5,7 @@
       "src": "client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "dist",
+        "distDir": "build",
         "buildCommand": "cd client && DISABLE_ESLINT_PLUGIN=true CI=false npm install && npm run build"
       }
     },
