@@ -21,7 +21,7 @@ const app = express();
 // Middleware
 app.use(cors({
   origin: process.env.NODE_ENV === 'production' 
-    ? 'http://localhost:3000'  // Production origin
+    ? ['https://github-mastery-online1.vercel.app', 'https://github-mastery-online.vercel.app']  // Production origins
     : ['http://localhost:3000', 'http://localhost:3001', 'http://127.0.0.1:3000'], // Development origins
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
