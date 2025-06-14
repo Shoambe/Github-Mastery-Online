@@ -3,6 +3,14 @@ src/components/Admin/ClassMonitoring.tsx
 src/components/Common/GuidedButton.tsx
 src/components/Dashboard/CompletionViewer.tsx
 src/components/Layout/Footer.tsx
+src/pages/Quizzes/QuizResults.tsx
+src/pages/Quizzes/QuizViewer.tsx
+src/pages/Quizzes/StudentQuizResultsView.tsx
+src/pages/Quizzes/StudentQuizzes.tsx
+src/services/exerciseService.ts
+src/services/progressService.ts
+src/services/quizService.ts
+src/utils/quizValidation.ts
 build/*
 node_modules/*
 src/**/*.tsx
